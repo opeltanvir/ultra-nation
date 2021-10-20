@@ -3,7 +3,7 @@ import React from 'react';
 const Country = (props) => {
     return (
         <div>
-            <h4>This is a {props.name}</h4>
+            <h4>This is a list {props.name}</h4>
         </div>
     );
 };
