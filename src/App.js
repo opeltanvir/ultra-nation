@@ -7,16 +7,20 @@ function App() {
   const [countries, setCountries] = useState([]);
 
   useEffect(()=>{
-    fetch('https://restcountries.com/v3.1/all')
+     fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())
     .then(data=>setCountries(data));
   },[])
+   const handleAddCountry =(country) => {
+     console.log('country added', country)
+    }
 
   return (
     <div className="App">
       <h1>country loaded: {countries.length}</h1>
+      <h4>Country added: </h4>
         {
-          countries.map(country => <Country country={country} key={country.alpha3Code}></Country>)
+          countries.map(country => <Country country={country} handleAddCountry={handleAddCountry} key={country.alpha3Code}></Country>)
         }
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
