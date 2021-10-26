@@ -13,7 +13,7 @@ const Cart = (props) => {
     return (
         <div>
             <h2>Cart: {cart.length}</h2>
-            <p>total population : {totalPopulation}</p>
+            <p>total population: {totalPopulation}</p>
         </div>
     );
 };
